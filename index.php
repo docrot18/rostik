@@ -13,7 +13,17 @@ $arResult = mysqli_query($connect, "SELECT * FROM clients;");
 <h1>Клиенты</h1>
     <?if($_SESSION['user']['is_Admin'] === "on"):?>
     <div class="container">
-
+        <?while($row = mysqli_fetch_assoc($arResult)){?>
+            <div class="task-card">
+                <div class="task-card-content">
+                    <div class="task-card__title"><?=$row["surname"]?> <?=$row["name"]?> <?=$row["fathersname"]?></div>
+                    <div class="task-card-dop">
+                        <div class="task-card__worker">Телефон: <?=$row["phone"]?></div>
+                        <div class="task-card__worker">Эл. почта: <?=$row["email"]?></div>
+                    </div>
+                </div>
+            </div>
+        <?}?>
         <a class="btn right" href="addClientForm.php">Добавить Клиента</a>
     </div>
     <?else:?>
