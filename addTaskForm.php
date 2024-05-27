@@ -24,7 +24,7 @@ $arResult = mysqli_query($connect, "SELECT * FROM clients;");
             <option><?=$row["surname"]?> <?=$row["name"]?></option>
         <?}?>
     </select>
-    <button type="submit">Добавить</button>
+    <button type="submit">Удалить</button>
 </form>
 </body>
 </html>

@@ -25,6 +25,7 @@ $arResult = mysqli_query($connect, "SELECT * FROM clients;");
             </div>
         <?}?>
         <a class="btn right" href="addClientForm.php">Добавить Клиента</a>
+        <a class="btn right" href="deleteClientForm.php">Удалить Клиента</a>
     </div>
     <?else:?>
         <div class="news-container container">

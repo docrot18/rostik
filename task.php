@@ -24,10 +24,9 @@ $arResult = mysqli_query($connect, "SELECT * FROM tasks;");
             </div>
         <?}?>
         </div>
+        <a class="btn right" href="addTaskForm.php">Добавить заявку</a>
+        <a class="btn right" href="deleteTaskForm.php">Удалить заявку</a>
 
-        <?if(isset($_SESSION['user']['is_Admin'])):?>
-            <a class="btn right" href="addTaskForm.php">Добавить заявку</a>
-        <?endif;?>
     </div>
 
 
